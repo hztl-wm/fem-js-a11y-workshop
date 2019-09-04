@@ -1,3 +1,5 @@
+See [HI-WM(s) Notes!](https://medium.com/@wharrison_27343/accessibility-in-javascript-applications-8a0b01d8266f)
+
 # Accessibility in JavaScript Applications
 
 Learn the necessary techniques and tools for building inclusive web applications with JavaScript from Gatsby's Head of Learning Marcy Sutton.

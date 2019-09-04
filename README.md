@@ -1,4 +1,4 @@
-See [HI-WM(s) Notes!](https://medium.com/@wharrison_27343/accessibility-in-javascript-applications-8a0b01d8266f)
+See [HI-WM(s) Notes!](https://medium.com/@wharrison_27343/accessibility-in-javascript-applications-8a0b01d8266f){:target="_blank" rel="noopener"}
 
 # Accessibility in JavaScript Applications
 

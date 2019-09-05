@@ -1,3 +1,6 @@
+
+// there is no focus management or focusability in this component
+
 import React, { useState, useRef, useEffect } from "react"
 import uuid from "uuid"
 
@@ -32,6 +35,7 @@ const Dropdown = ({ activatorText, items = [] }) => {
         <div
             className="wrap"
         >
+            {/* A <span> with an onClick is not a focusable element */}
             <span
                 ref={activatorRef}
                 className="activator"
@@ -39,6 +43,7 @@ const Dropdown = ({ activatorText, items = [] }) => {
             >
                 { activatorText + '' }
             </span>
+            {/* items in a <div> are not countable, this is not accessible for screen readers */}
             <div
                 ref={listRef}
                 id={`list${uuid.v4()}`}

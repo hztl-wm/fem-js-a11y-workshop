@@ -43,8 +43,8 @@ const Dropdown = ({ activatorText = 'Dropdown', items = [] }) => {
             onKeyUp={wrapKeyHandler}
         >
             <button
-                aria-haspopup="true"
-                aria-controls="dropdown1"
+                aria-haspopup="true" // aria-haspopup is used to indicate that the button will open the <ul> below FOR Screen Readers
+                aria-controls="dropdown1" // mixed support, binds with ID of another element, in this case the <ul> below
                 onClick={clickHandler}
                 className="dropdown-activator"
                 ref={activatorRef}

@@ -1,9 +1,10 @@
-import React from "react"
-import { css } from "@emotion/core"
+import React from "react" // import what?!
+import { css } from "@emotion/core" // this library is already installed in this app allows you to write styles in this file
 
-const styles = css`
+// template literal
+const styles = css` 
     .routeSkipHeading {
-        position: relative;
+        position: relative; 
     }
     .routeSkipLink {
         display: inline-block;
@@ -21,18 +22,21 @@ const styles = css`
         opacity: 1;
     }
 `
-const RouteHeading = ({level = 1, targetID, children}) => {
-    const Heading = `h${level}`;
+
+// start of component
+const RouteHeading = ({level = 1, targetID, children}) => { // passed in a level with a start value of 1, looking for a targetID, and a children
+    const Heading = `h${level}`; // this will use whatever 'h'level element to match the heading it is attached to
     return (
-        <Heading css={styles} className="routeSkipHeading">
-            <a href={`#${targetID}`}
-               id="skip-main"
-               className="routeSkipLink"
-               aria-label={`back to ${targetID}`}
-               title={`Skip to ${targetID}`}>
+        <Heading css={styles} className="routeSkipHeading"> {/* pass styles established above, add className from above */}
+            <a href={`#${targetID}`} // will match any element based on its ID, better pass in a valid ID!
+               id="skip-main" // this is an id...
+               className="routeSkipLink" // className that matches above css
+               aria-label={`back to ${targetID}`} // accessibile attribute? yep.
+               title={`Skip to ${targetID}`}> {/* more accessibility! */}
             </a>
-            {children}
+            {children} {/* pass the children in */}
         </Heading>
     )
 }
 export default RouteHeading
+// export so you can use it

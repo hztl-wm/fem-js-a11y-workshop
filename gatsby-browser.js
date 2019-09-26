@@ -1,3 +1,5 @@
 exports.onRouteUpdate = ({ location, prevLocation }) => {
-   if (location)
+   if (prevLocation) {
+       
+   }
 }

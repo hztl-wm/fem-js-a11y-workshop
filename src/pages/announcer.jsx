@@ -13,9 +13,9 @@ const LiveRegionDemoPage = () => {
     <Layout>
       <SEO title="Live Regions" keywords={['javascript', 'accessibility', 'react']} />
       <div>
-        <h2>
+      {/* <h2> */} <RouteTargetHeading level={2} targetID="navigation"> {/* heading levels should go in order. for this site the h1 is in the header. the targetID (specific to this project) is to target the navigation */}
           Live Region Demo
-        </h2>
+      {/* </h2> */} </RouteTargetHeading>
         <section className="two-col">
           <div>
           <h3>Inaccessible async form demo  [<a href="https://github.com/marcysutton/js-a11y-workshop/tree/master/src/components/bad/async-form.js" aria-label="accessible demo source">source</a>]</h3>

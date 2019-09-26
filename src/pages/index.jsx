@@ -1,5 +1,7 @@
 import React from "react"
 
+import RouteTargetHeading from "../components/better/route-target-heading.js"
+
 import Layout from '../components/site-chrome/layout'
 import SEO from '../components/site-chrome/seo'
 
@@ -7,9 +9,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={['javascript', 'accessibility', 'react']} />
     <div>
-      <h2>
+      {/* <h2> */} <RouteTargetHeading level={2} targetID="navigation"> {/* heading levels should go in order. for this site the h1 is in the header. the targetID (specific to this project) is to target the navigation */}
         Let’s make the web more accessible!
-      </h2>
+      {/* </h2> */} </RouteTargetHeading>
       <p>Here are some web accessibility tools, resources, and books for web designers and developers.</p>   
 
       <h3 id="Testing-Tools">Testing Tools</h3>

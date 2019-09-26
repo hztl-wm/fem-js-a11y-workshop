@@ -30,9 +30,9 @@ const ReducedMotionDemoPage = () => (
   <Layout>
     <SEO title="Reducing motion" keywords={['javascript', 'accessibility', 'react']} />
     <div>
-      <h2>
+      {/* <h2> */} <RouteTargetHeading level={2} targetID="navigation"> {/* heading levels should go in order. for this site the h1 is in the header. the targetID (specific to this project) is to target the navigation */}
         Reducing motion for accessibility
-      </h2>
+      {/* </h2> */} </RouteTargetHeading>
       <p>Let‘s build safe interfaces that delight.</p>
       <section className="two-col">
         <div>

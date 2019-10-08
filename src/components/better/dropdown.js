@@ -26,7 +26,9 @@ const Dropdown = ({ activatorText = 'Dropdown', items = [] }) => {
     }
     useEffect(() => { // React hook accepts a callback function https://reactjs.org/docs/hooks-reference.html#useeffect
         if (isOpen) {
+            if (dropdownListRef) {
             dropdownListRef.current.querySelector('a').focus() // get the first item in the <ul>
+        }
             
             document.addEventListener('mousedown', clickOutsideHandler)
         } else {
@@ -45,6 +47,7 @@ const Dropdown = ({ activatorText = 'Dropdown', items = [] }) => {
             <button
                 aria-haspopup="true" // aria-haspopup is used to indicate that the button will open the <ul> below FOR Screen Readers
                 aria-controls="dropdown1" // mixed support, binds with ID of another element, in this case the <ul> below
+                data-testid="dropdown-activator" // an id to use for testing
                 onClick={clickHandler}
                 ref={activatorRef}
                 className="dropdown-activator"
@@ -56,7 +59,9 @@ const Dropdown = ({ activatorText = 'Dropdown', items = [] }) => {
                 ref={dropdownListRef}
                 // tabIndex="-1" // makes the list focusable
                 className={`dropdown-itemList ${isOpen ? 'active' : ''}`}
-                role="list">
+                role="list"
+                data-testid="dropdown-itemList" // an id to use for testing
+                >
                 { items.map((item, index) => {
                     return <li key={index} role="listitem">
                         <a href={item.url}>{item.text}</a>

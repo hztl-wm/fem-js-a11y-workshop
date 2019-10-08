@@ -27,9 +27,16 @@ describe(`Dropdown`, () => {
 
     const activator = dropdown.getByTestId('dropdown-activator')
     activator.focus()
-
+    
     expect(activator.toHaveFocus)
-
+    
     fireEvent.click(activator)
+
+    // below is an additional assertion about what is expected behavior, best practice is to pull it out into its own test, but most tutorials ignore best practice... no different here. Anyway, try changing the <a> on line 67 to a <div> or something else, then in the terminal run 'npm test' and watch the test FAIL!
+
+    const dropdownList = dropdown.getByTestId('dropdown-itemList')
+
+    const firstAnchor = dropdownList.querySelector('a')
+    expect(firstAnchor).toHaveFocus()
   })
 })
